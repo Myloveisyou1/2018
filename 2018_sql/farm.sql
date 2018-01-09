@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2018-01-08 17:11:42
+Date: 2018-01-09 16:54:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `f_consume` (
   `f_consume_remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `f_consume_time` datetime DEFAULT NULL COMMENT '消费时间',
   PRIMARY KEY (`fid`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='消费信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='消费信息表';
 
 -- ----------------------------
 -- Records of f_consume
@@ -48,6 +48,9 @@ INSERT INTO `f_consume` VALUES ('14', '2', '15.00', '午饭', '2018-01-06 12:34:
 INSERT INTO `f_consume` VALUES ('15', '4', '74.00', '超市', '2018-01-06 19:35:51');
 INSERT INTO `f_consume` VALUES ('16', '7', '31.60', '轻轨+滴滴打车', '2018-01-08 08:36:36');
 INSERT INTO `f_consume` VALUES ('17', '4', '6.10', '红牛+哇哈哈', '2018-01-08 08:37:30');
+INSERT INTO `f_consume` VALUES ('18', '5', '10.00', '洗衣粉', '2018-01-08 20:06:32');
+INSERT INTO `f_consume` VALUES ('19', '7', '1.80', '公交车', '2018-01-09 08:07:47');
+INSERT INTO `f_consume` VALUES ('20', '2', '12.00', '午饭', '2018-01-09 12:08:08');
 
 -- ----------------------------
 -- Table structure for f_consume_detail
@@ -60,7 +63,7 @@ CREATE TABLE `f_consume_detail` (
   `f_price` decimal(10,2) DEFAULT NULL COMMENT '价格',
   `f_ctime` datetime DEFAULT NULL,
   PRIMARY KEY (`fid`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='消费信息详情表';
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='消费信息详情表';
 
 -- ----------------------------
 -- Records of f_consume_detail
@@ -88,6 +91,9 @@ INSERT INTO `f_consume_detail` VALUES ('20', '15', '超市', '74.00', '2018-01-0
 INSERT INTO `f_consume_detail` VALUES ('21', '16', '轻轨', '3.60', '2018-01-08 08:40:32');
 INSERT INTO `f_consume_detail` VALUES ('22', '16', '滴滴打车', '28.00', '2018-01-08 08:40:30');
 INSERT INTO `f_consume_detail` VALUES ('23', '17', '红牛+哇哈哈', '6.10', '2018-01-08 08:40:06');
+INSERT INTO `f_consume_detail` VALUES ('24', '18', '洗衣粉', '10.00', '2018-01-08 20:07:09');
+INSERT INTO `f_consume_detail` VALUES ('25', '20', '午饭饺子', '12.00', '2018-01-09 12:08:36');
+INSERT INTO `f_consume_detail` VALUES ('26', '19', '公交车', '1.80', '2018-01-09 08:08:51');
 
 -- ----------------------------
 -- Table structure for f_goods
@@ -229,12 +235,11 @@ CREATE TABLE `f_time_axis` (
   `f_utime` datetime DEFAULT NULL COMMENT '修改时间',
   `f_version` int(2) DEFAULT NULL COMMENT '版本',
   PRIMARY KEY (`fid`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='时间轴';
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COMMENT='时间轴';
 
 -- ----------------------------
 -- Records of f_time_axis
 -- ----------------------------
-INSERT INTO `f_time_axis` VALUES ('2', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
 INSERT INTO `f_time_axis` VALUES ('3', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
 INSERT INTO `f_time_axis` VALUES ('4', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
 INSERT INTO `f_time_axis` VALUES ('5', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
@@ -242,6 +247,33 @@ INSERT INTO `f_time_axis` VALUES ('6', '惹我生气', '1', '哈哈哈哈哈', '
 INSERT INTO `f_time_axis` VALUES ('7', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
 INSERT INTO `f_time_axis` VALUES ('8', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
 INSERT INTO `f_time_axis` VALUES ('9', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('10', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('11', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('12', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('13', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('14', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('15', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('16', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('17', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('18', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('19', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('20', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('21', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('22', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('23', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('24', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('25', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('26', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('27', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('28', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('29', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('30', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('31', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('32', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('33', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('34', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('35', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
+INSERT INTO `f_time_axis` VALUES ('36', '惹我生气', '1', '哈哈哈哈哈', '杜敏', '2017-02-02 12:13:14', '2017-02-02 12:13:14', '1');
 
 -- ----------------------------
 -- Table structure for f_user
