@@ -66,8 +66,5 @@ document.writeln("<script type='text/javascript' src='static/layui.js'>");
 document.writeln("</script>");
 document.writeln("<script type='text/javascript' src='static/jquery-1.11.1.min.js'>");
 document.writeln("</script>");
-document.writeln("<script type='text/javascript'>");
-document.writeln("var PATH = 'http://localhost:8080';");
-document.writeln("</script>");
 document.writeln("</body>");
 document.writeln("</html>");

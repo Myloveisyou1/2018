@@ -8,22 +8,45 @@
 </head>
 <body class="layui-layout-body">
     <div class="layui-main">
-        <!--<form class="layui-form">
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <input type="text" name="title" required="" lay-verify="required" placeholder="登录名" autocomplete="off" class="layui-input">
+                    <input type="text" id="userName" required="" lay-verify="required" placeholder="登录名" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <input type="password" name="title" required="" lay-verify="required" placeholder="登录密码" autocomplete="off" class="layui-input">
+                    <input type="password" id="password" required="" lay-verify="required" placeholder="登录密码" autocomplete="off" class="layui-input">
                 </div>
             </div>
-            <button class="layui-btn layui-btn-fluid">登陆</button>
-        </form>-->
-        <div class="layui-fluid">
-            ……
-        </div>
+            <button class="layui-btn layui-btn-fluid" onclick="login()">登陆</button>
+
     </div>
+    <script type="text/javascript" src="static/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="static/js/cookie.js"></script>
+<script type="text/javascript">
+
+    function login(){
+        $.ajax({
+            type:"get",
+            url:PATH+"/login",
+            dataType:"json",
+            data:{
+                userName:$("#userName").val(),
+                password:$("#password").val()
+            },
+            success:function(data){
+                if(data.code == 200){
+                    var data = data.data;
+                    console.log(data);
+                    //保存cookie信息
+                    setCookie("sessionId",data.sessionId);
+                    setCookie("user",data.user);
+                    window.location.href = "index.html";
+                }
+            }
+        });
+
+    }
+</script>
 </body>
 </html>
