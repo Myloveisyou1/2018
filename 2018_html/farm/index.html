@@ -96,7 +96,6 @@
     </div>
     <!--尾部信息-->
     <script type="text/javascript" src="static/js/foot.js"></script>
-    <script type="text/javascript" src="static/js/cookie.js"></script>
     <script type="text/javascript" src="static/js/echarts.min.js"></script>
 </div>
 <script src="static/layui.js"></script>
@@ -116,7 +115,6 @@
                 sessionId:sessionId
             },
             success:function(data){
-                alert(data.code);
                 if(data.code == 200){
                     var data = data.data;
                     console.log(data);
