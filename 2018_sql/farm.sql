@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2018-01-09 16:54:49
+Date: 2018-01-10 18:02:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `f_consume` (
   `f_consume_remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `f_consume_time` datetime DEFAULT NULL COMMENT '消费时间',
   PRIMARY KEY (`fid`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='消费信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='消费信息表';
 
 -- ----------------------------
 -- Records of f_consume
@@ -51,6 +51,8 @@ INSERT INTO `f_consume` VALUES ('17', '4', '6.10', '红牛+哇哈哈', '2018-01-
 INSERT INTO `f_consume` VALUES ('18', '5', '10.00', '洗衣粉', '2018-01-08 20:06:32');
 INSERT INTO `f_consume` VALUES ('19', '7', '1.80', '公交车', '2018-01-09 08:07:47');
 INSERT INTO `f_consume` VALUES ('20', '2', '12.00', '午饭', '2018-01-09 12:08:08');
+INSERT INTO `f_consume` VALUES ('21', '2', '13.00', '午饭', '2018-01-10 13:37:35');
+INSERT INTO `f_consume` VALUES ('22', '7', '3.60', '轻轨+公交', '2018-01-10 18:02:18');
 
 -- ----------------------------
 -- Table structure for f_consume_detail
@@ -63,7 +65,7 @@ CREATE TABLE `f_consume_detail` (
   `f_price` decimal(10,2) DEFAULT NULL COMMENT '价格',
   `f_ctime` datetime DEFAULT NULL,
   PRIMARY KEY (`fid`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='消费信息详情表';
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='消费信息详情表';
 
 -- ----------------------------
 -- Records of f_consume_detail
@@ -94,6 +96,8 @@ INSERT INTO `f_consume_detail` VALUES ('23', '17', '红牛+哇哈哈', '6.10', '
 INSERT INTO `f_consume_detail` VALUES ('24', '18', '洗衣粉', '10.00', '2018-01-08 20:07:09');
 INSERT INTO `f_consume_detail` VALUES ('25', '20', '午饭饺子', '12.00', '2018-01-09 12:08:36');
 INSERT INTO `f_consume_detail` VALUES ('26', '19', '公交车', '1.80', '2018-01-09 08:08:51');
+INSERT INTO `f_consume_detail` VALUES ('27', '21', '午饭', '13.00', '2018-01-10 13:38:03');
+INSERT INTO `f_consume_detail` VALUES ('28', '22', '轻轨+公交', '3.60', '2018-01-10 18:02:37');
 
 -- ----------------------------
 -- Table structure for f_goods
