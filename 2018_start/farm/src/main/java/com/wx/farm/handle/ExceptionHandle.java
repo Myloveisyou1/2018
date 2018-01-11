@@ -1,6 +1,7 @@
 package com.wx.farm.handle;
 
 import com.wx.farm.domain.Result;
+import com.wx.farm.enums.ResultEnum;
 import com.wx.farm.exception.FarmException;
 import com.wx.farm.utils.ResultUtil;
 import org.slf4j.Logger;
@@ -27,7 +28,7 @@ public class ExceptionHandle {
             return ResultUtil.error(farmException.getCode(),farmException.getMessage());
         }else{
             logger.info("系统异常{}",e);
-            return ResultUtil.error(-1,"系统繁忙,请稍后再试!");
+            return ResultUtil.error(ResultEnum.UNKNOW_ERROR.getCode(),ResultEnum.UNKNOW_ERROR.getMsg());
         }
     }
 }
