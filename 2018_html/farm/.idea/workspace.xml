@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="675bacaf-3b4d-4958-92e4-d6720fac94fb" name="Default" comment="时间轴页面">
+    <list default="true" id="675bacaf-3b4d-4958-92e4-d6720fac94fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/head.js" afterPath="$PROJECT_DIR$/static/js/head.js" />
     </list>
     <ignored path="farm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -303,7 +301,13 @@
       <option name="project" value="LOCAL" />
       <updated>1515470395248</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="登陆相关页面">
+      <created>1515483307304</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1515483307304</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -344,7 +348,8 @@
     <MESSAGE value="首页页面发开" />
     <MESSAGE value="时间轴页面" />
     <MESSAGE value="登陆实现cookie" />
-    <option name="LAST_COMMIT_MESSAGE" value="登陆实现cookie" />
+    <MESSAGE value="登陆相关页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="登陆相关页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

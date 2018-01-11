@@ -6,7 +6,7 @@ package com.wx.farm.enums;
  * @Date: Created in 2017/12/26 13:38
  */
 public enum ResultEnum {
-    UNKNOW_ERROR(-1,"未知错误"),
+    UNKNOW_ERROR(-1,"系统繁忙,请稍后再试!"),
     BREAKFIRST(1,"早餐"),
     LUNCH(2,"午餐"),
     DINNER(3,"晚餐"),
