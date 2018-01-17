@@ -1,6 +1,5 @@
 package com.wx.farm.interceptor;
 
-import com.wx.farm.aspect.HttpAspect;
 import com.wx.farm.enums.ResultEnum;
 import com.wx.farm.exception.FarmException;
 import com.wx.farm.service.LoginService;
@@ -12,7 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.logging.Logger;
 
 /**
  * @Descript: 登陆拦截器
