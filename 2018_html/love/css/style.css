@@ -1,0 +1,12 @@
+body{
+    background-color: #fffeee;
+    color: #a5a6a1;
+}
+.layui-footer{
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #aaaaaa;
+    text-align: center;
+}
