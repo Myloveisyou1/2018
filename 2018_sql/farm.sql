@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2018-01-17 17:10:26
+Date: 2018-01-18 18:07:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `f_consume` (
   `f_consume_remark` varchar(255) DEFAULT NULL COMMENT '备注',
   `f_consume_time` datetime DEFAULT NULL COMMENT '消费时间',
   PRIMARY KEY (`fid`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COMMENT='消费信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COMMENT='消费信息表';
 
 -- ----------------------------
 -- Records of f_consume
@@ -69,6 +69,10 @@ INSERT INTO `f_consume` VALUES ('35', '1', '2.00', '早饭(油条)', '2018-01-15
 INSERT INTO `f_consume` VALUES ('36', '7', '31.00', '车费', '2018-01-15 08:49:49');
 INSERT INTO `f_consume` VALUES ('37', '2', '14.00', '午饭', '2018-01-16 16:52:12');
 INSERT INTO `f_consume` VALUES ('38', '7', '3.60', '车费', '2018-01-16 16:52:35');
+INSERT INTO `f_consume` VALUES ('39', '2', '14.00', '午饭', '2018-01-17 12:24:03');
+INSERT INTO `f_consume` VALUES ('40', '7', '3.60', '车费', '2018-01-17 19:24:21');
+INSERT INTO `f_consume` VALUES ('41', '2', '15.00', '午饭', '2018-01-18 12:24:37');
+INSERT INTO `f_consume` VALUES ('42', '7', '3.60', '车费', '2018-01-18 17:24:52');
 
 -- ----------------------------
 -- Table structure for f_consume_detail
