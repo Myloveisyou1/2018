@@ -1,16 +1,17 @@
 package com.wx.farm.service;
 
-import com.wx.farm.domain.Consume;
+import com.wx.farm.domain.consume.Consume;
+import com.wx.farm.domain.consume.ConsumeDetail;
 import com.wx.farm.enums.ResultEnum;
 import com.wx.farm.mapper.ConsumeMapper;
 import com.wx.farm.utils.CommonUtil;
 import com.wx.farm.utils.DatesUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -93,5 +94,23 @@ public class ConsumeService {
         }
 
         return map;
+    }
+
+    @Transactional
+    public int addConsume(Consume consume,String fName,String fPrice) {
+
+        ConsumeDetail consumeDetail = new ConsumeDetail();
+        String ctime = DatesUtils.time();
+        int a = mapper.addConsume(consume);
+        consumeDetail.setF_consume_id(consume.getFid());
+        String[] fname = fName.split(",");
+        String[] fprice = fPrice.split(",");
+        for (int i=0 ;i <fname.length ; i++) {
+            consumeDetail.setF_name(fname[i]);
+            consumeDetail.setF_price(Double.parseDouble(fprice[i]));
+            consumeDetail.setF_ctime(ctime);
+            mapper.addConsumeDetail(consumeDetail);
+        }
+        return a;
     }
 }

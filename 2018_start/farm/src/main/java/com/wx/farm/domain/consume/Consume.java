@@ -1,4 +1,4 @@
-package com.wx.farm.domain;
+package com.wx.farm.domain.consume;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,7 +14,7 @@ public class Consume implements Serializable{
     private double f_consume_money;
     private String f_consume_type;
     private String f_consume_remark;
-    private Date f_consume_time;
+    private String f_consume_time;
 
     public Integer getFid() {
         return fid;
@@ -48,11 +48,11 @@ public class Consume implements Serializable{
         this.f_consume_remark = f_consume_remark;
     }
 
-    public Date getF_consume_time() {
+    public String getF_consume_time() {
         return f_consume_time;
     }
 
-    public void setF_consume_time(Date f_consume_time) {
+    public void setF_consume_time(String f_consume_time) {
         this.f_consume_time = f_consume_time;
     }
 }

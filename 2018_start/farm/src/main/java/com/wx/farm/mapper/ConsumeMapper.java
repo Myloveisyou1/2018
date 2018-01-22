@@ -1,12 +1,11 @@
 package com.wx.farm.mapper;
 
-import com.wx.farm.domain.Consume;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import com.wx.farm.domain.consume.Consume;
+import com.wx.farm.domain.consume.ConsumeDetail;
+import com.wx.farm.utils.SimpleInsertLangDriver;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
-import javax.websocket.server.ServerEndpoint;
 import java.util.List;
 import java.util.Map;
 
@@ -25,4 +24,23 @@ public interface ConsumeMapper {
     @Select("select a.fid,a.f_name,a.f_des,b.f_consume_money,b.f_consume_time from f_sys_type a left join f_consume b on a.fid=b.f_consume_type and b.f_consume_time >= #{0}" +
             "AND b.f_consume_time <= #{1}")
     List<Map<String,Object>> findConsumeByDate(String lastMonday, String lastSunday);
+
+    /**
+     * 保存消费记录主表
+     * @param consume
+     * @return
+     */
+    @Insert("insert into f_consume (#{consume})")
+    @Lang(SimpleInsertLangDriver.class)
+    @Options(useGeneratedKeys=true, keyProperty="fid", keyColumn="fid")
+    int addConsume(Consume consume);
+
+    /**
+     * 保存消费从表
+     * @param consumeDetail
+     * @return
+     */
+    @Insert("insert into f_consume_detail (#{consumeDetail})")
+    @Lang(SimpleInsertLangDriver.class)
+    int addConsumeDetail( ConsumeDetail consumeDetail);
 }
