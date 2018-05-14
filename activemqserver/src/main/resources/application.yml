@@ -1,0 +1,10 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: activemqserver
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://47.98.60.240:8888/eureka/
+      defaultZone: http://localhost:8888/eureka/

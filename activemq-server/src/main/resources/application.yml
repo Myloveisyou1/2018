@@ -1,0 +1,20 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: activemq-server
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://47.98.60.240:8888/eureka/
+      defaultZone: http://localhost:8888/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+      leaseRenewalIntervalInSeconds: 10
+      leaseExpirationDurationInSeconds: 30
