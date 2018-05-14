@@ -1,0 +1,5 @@
+eureka-server 注册中心 		8888
+zuulserver    路由网关 		80
+swaggerserver 集成swagger 	8081
+redisserver   集成redis服务 	8082
+activemqserver 集成activemq消息队列 8083
