@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: zuulserver
+
+#����ע������
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://47.98.60.240:8888/eureka/
+
+#����·��
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: swaggerserver
+    api-b:
+      path: /api-b/**
+      serviceId: bsystem
+
